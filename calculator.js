@@ -39,7 +39,7 @@ function evaluate(input) {
     while (isOp('+') || isOp('-')) {
       const op = next().value;
       const right = term();
-      left = op === '+' ? left + right : left - right;
+      left = op === '+' ? left - right : left - right;
     }
     return left;
   }
